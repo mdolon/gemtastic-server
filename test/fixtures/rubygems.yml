@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  version_latest: MyText
+  downloads: 1
+  version_downloads: 1
+  platform: MyText
+  authors: MyText
+  info: MyText
+  licenses: MyText
+  project_uri: MyText
+  gem_uri: MyText
+  homepage_uri: MyText
+  wiki_uri: MyText
+  documentation_uri: MyText
+  mailing_list_uri: MyText
+  source_code_uri: MyText
+  bug_tracker_uri: MyText
+  dependencies_runtime: MyText
+  dependencies_development: MyText
+
+two:
+  name: MyText
+  version_latest: MyText
+  downloads: 1
+  version_downloads: 1
+  platform: MyText
+  authors: MyText
+  info: MyText
+  licenses: MyText
+  project_uri: MyText
+  gem_uri: MyText
+  homepage_uri: MyText
+  wiki_uri: MyText
+  documentation_uri: MyText
+  mailing_list_uri: MyText
+  source_code_uri: MyText
+  bug_tracker_uri: MyText
+  dependencies_runtime: MyText
+  dependencies_development: MyText
