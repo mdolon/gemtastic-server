@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :rubygems, except: [:new, :edit]
+  resources :rubygems, only: [:showarray]
+
+  get 'gems/:gemlist' => 'rubygems#showarray', as: :gemlist
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

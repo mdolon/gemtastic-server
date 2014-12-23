@@ -2,9 +2,8 @@ class RubygemsController < ApplicationController
   # GET /rubygems
   # GET /rubygems.json
   def index
-    @rubygems = Rubygem.all
-
-    render json: @rubygems
+    # @rubygems = Rubygem.all
+    # render json: @rubygems
   end
 
   # GET /rubygems/1
@@ -12,6 +11,12 @@ class RubygemsController < ApplicationController
   def show
     @rubygem = Rubygem.find(params[:id])
 
+    render json: @rubygem
+  end
+
+  def showarray
+    gemlist = params[:gemlist].split(',')
+    @rubygem = Rubygem.where("name IN (?)", gemlist).to_a
     render json: @rubygem
   end
 
