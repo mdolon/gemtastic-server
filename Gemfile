@@ -2,12 +2,8 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.1.8'
-
 gem 'rails-api'
-
 gem 'spring', :group => :development
-
-
 gem 'pg'
 
 
@@ -19,10 +15,16 @@ gem 'pg'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano', :group => :development
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+# Added for deployments
+group :development do
+  gem 'capistrano', '~> 3.2.1'
+  gem 'capistrano-unicorn-nginx', '~> 3.1.0'
+end

@@ -15,8 +15,8 @@ class RubygemsController < ApplicationController
   end
 
   def showarray
-    gemlist = params[:gemlist].split(',')
-    @rubygem = Rubygem.where("name IN (?)", gemlist).to_a
+    gemlist = params[:gemlist].split(/[,\+\s]/)
+    @rubygem = Rubygem.where(name: gemlist)
     render json: @rubygem
   end
 
