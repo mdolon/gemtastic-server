@@ -12,15 +12,15 @@ development:
 test: &test
   adapter: postgresql
   encoding: utf8
-  database: gems2
-  username: 
+  database: gemtastic_test
+  username: postgres
   password:
   host: localhost
 
 production:
   adapter: postgresql
   encoding: utf8
-  database: trendbot_prod
-  username: trendbot
-  password: tr3ndb0t3r
+  database: gemtastic_prod
+  username: postgres
+  password: 
   host: localhost
