@@ -26,4 +26,6 @@ gem 'unicorn'
 # Added for deployments
 group :development do
   gem 'capistrano', '~> 3.2.1'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
 end
