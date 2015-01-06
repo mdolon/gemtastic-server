@@ -3,7 +3,10 @@ require 'capistrano/setup'
 
 # Includes default deployment tasks
 require 'capistrano/deploy'
-require 'capistrano/unicorn_nginx'
+
+load 'deploy'
+load 'deploy/assets'
+load 'config/deploy'
 
 # Includes tasks from other gems included in your Gemfile
 #

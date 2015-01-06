@@ -19,7 +19,7 @@ set :stage, :production
 set :stage_url, "http://gemtastic.org"
 server "74.207.227.209", user: "mdolon", roles: %w{web app db}
 set :deploy_to, "/home/www/gemtastic.org/app/production"
-set :nginx_server_name, 'gemtastic.org'
+# set :nginx_server_name, 'gemtastic.org'
 
 # Custom SSH Options
 # ==================

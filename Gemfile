@@ -26,5 +26,4 @@ gem 'unicorn'
 # Added for deployments
 group :development do
   gem 'capistrano', '~> 3.2.1'
-  gem 'capistrano-unicorn-nginx', '~> 3.1.0'
 end
