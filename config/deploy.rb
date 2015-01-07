@@ -3,7 +3,8 @@ lock '3.2.1'
 
 set :application, 'gemtastic_server'
 set :repo_url, 'git@github.com:mdolon/gemtastic-server.git'
-set :deploy_user, 'mdolon'
+set :deploy_user, 'deploybot'
+set :pty, true
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call

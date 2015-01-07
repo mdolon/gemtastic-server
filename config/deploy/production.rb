@@ -21,7 +21,7 @@ set :stage_url, "http://gemtastic.org"
 set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
 set :server_name, "www.gemtastic.org gemtastic.org"
 
-server "www.gemtastic.org", user: "mdolon", roles: %w{web app db}, primary: true
+server "www.gemtastic.org", user: "deploybot", roles: %w{web app db}, primary: true
 set :deploy_to, "/home/www/gemtastic.org/app/production"
 
 set :rails_env, :production
