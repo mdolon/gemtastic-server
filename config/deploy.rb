@@ -4,7 +4,6 @@ lock '3.2.1'
 set :application, 'gemtastic_server'
 set :repo_url, 'git@github.com:mdolon/gemtastic-server.git'
 set :deploy_user, 'deploybot'
-set :pty, true
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
@@ -33,7 +32,7 @@ set :tests, []
 # for details of operations
 set(:config_files, %w(
   nginx.conf
-  database.example.yml
+  database.yml
   log_rotation
   monit
   unicorn.rb
@@ -85,7 +84,7 @@ namespace :deploy do
 
   # remove the default nginx configuration as it will tend
   # to conflict with our configs.
-  before 'deploy:setup_config', 'nginx:remove_default_vhost'
+  # before 'deploy:setup_config', 'nginx:remove_default_vhost'
 
   # reload nginx to it will pick up any modified vhosts from
   # setup_config
