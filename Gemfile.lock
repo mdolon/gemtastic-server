@@ -42,14 +42,26 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
+    coderay (1.1.0)
     colorize (0.7.3)
+    database_params (0.0.0)
+    delay_minutes (0.0.0)
     erubis (2.7.0)
+    file_to_download (0.0.0)
+    gem_scraper (0.0.3)
+      database_params
+      delay_minutes
+      file_to_download
+      json
+      pg
+      string_in_file
     hike (1.2.3)
     i18n (0.7.0)
     json (1.8.1)
     kgio (2.9.2)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    method_source (0.8.2)
     mime-types (2.4.3)
     minitest (5.5.0)
     multi_json (1.10.1)
@@ -57,6 +69,10 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
     pg (0.17.0)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -80,6 +96,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.13.0)
     rake (10.4.2)
+    slop (3.6.0)
     spring (1.2.0)
     sprockets (2.12.3)
       hike (~> 1.2)
@@ -94,6 +111,7 @@ GEM
       colorize
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    string_in_file (0.1.2)
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
@@ -112,7 +130,9 @@ DEPENDENCIES
   capistrano-bundler
   capistrano-rails
   capistrano-rvm
+  gem_scraper
   pg
+  pry
   rails (= 4.1.8)
   rails-api
   spring
