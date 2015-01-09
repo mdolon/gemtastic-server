@@ -16,8 +16,8 @@ class RubygemsController < ApplicationController
 
   def showarray
     gemlist = params[:gemlist].split(/[,\+\s]/)
-    @rubygem = Rubygem.where(name: gemlist)
-    render json: (@rubygem || "No gems found")
+    @rubygems = Rubygem.where(name: gemlist)
+    render json: (@rubygems || "No gems found")
   end
 
   # POST /rubygems
