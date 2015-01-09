@@ -12,15 +12,15 @@ development:
 test: &test
   adapter: postgresql
   encoding: utf8
-  database: gemtastic_test
-  username: gemtastic
+  database: gemtastic_server_production
+  username: gemtastic_server_production
   password: g3mt4st3s000g00d
   host: localhost
 
 production:
   adapter: postgresql
   encoding: utf8
-  database: gemtastic_prod
-  username: gemtastic
+  database: gemtastic_server_test
+  username: gemtastic_server_production
   password: g3mt4st3s000g00d
   host: localhost

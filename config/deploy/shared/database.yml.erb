@@ -5,7 +5,6 @@
   reconnect: false
   database: <%= "#{fetch(:application)}_#{fetch(:rails_env)}" %>
   pool: 5
-  username: gemtastic
-  password: g3mt4st3s000g00d
+  username: <%= "#{fetch(:application)}_#{fetch(:rails_env)}" %>
+  password:
   host: localhost
-  port: 5432
