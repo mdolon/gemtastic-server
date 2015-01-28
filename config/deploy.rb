@@ -105,6 +105,6 @@ namespace :raker do
   # run like: cap staging raker:invoke task=a_certain_task
   task :invoke do
     stage = ENV['stage'] || "production"
-    run("cd #{deploy_to}/current; /usr/bin/env bundle exec rake #{ENV['task']} RAILS_ENV=#{stage}")
+    execute "cd #{deploy_to}/current; /usr/bin/env bundle exec rake #{ENV['task']} RAILS_ENV=#{stage}"
   end
 end
