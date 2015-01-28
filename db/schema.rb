@@ -17,45 +17,25 @@ ActiveRecord::Schema.define(version: 20141219223436) do
   enable_extension "plpgsql"
 
   create_table "rubygems", force: true do |t|
-    t.text    "name"
-    t.text    "version_latest"
-    t.integer "downloads"
-    t.integer "version_downloads"
-    t.text    "platform"
-    t.text    "authors"
-    t.text    "info"
-    t.text    "licenses",                 array: true
-    t.text    "project_uri"
-    t.text    "gem_uri"
-    t.text    "homepage_uri"
-    t.text    "wiki_uri"
-    t.text    "documentation_uri"
-    t.text    "mailing_list_uri"
-    t.text    "source_code_uri"
-    t.text    "bug_tracker_uri"
-    t.text    "dependencies_runtime",     array: true
-    t.text    "dependencies_development", array: true
-  end
-
-  create_table "rubygemsnew", force: true do |t|
-    t.text    "name"
-    t.text    "version_latest"
-    t.integer "downloads"
-    t.integer "version_downloads"
-    t.text    "platform"
-    t.text    "authors"
-    t.text    "info"
-    t.text    "licenses",                 array: true
-    t.text    "project_uri"
-    t.text    "gem_uri"
-    t.text    "homepage_uri"
-    t.text    "wiki_uri"
-    t.text    "documentation_uri"
-    t.text    "mailing_list_uri"
-    t.text    "source_code_uri"
-    t.text    "bug_tracker_uri"
-    t.text    "dependencies_runtime",     array: true
-    t.text    "dependencies_development", array: true
+    t.text     "name"
+    t.text     "version"
+    t.integer  "downloads"
+    t.integer  "version_downloads"
+    t.text     "platform"
+    t.text     "authors"
+    t.text     "info"
+    t.text     "licenses",          default: [], array: true
+    t.text     "project_uri"
+    t.text     "gem_uri"
+    t.text     "homepage_uri"
+    t.text     "wiki_uri"
+    t.text     "documentation_uri"
+    t.text     "mailing_list_uri"
+    t.text     "source_code_uri"
+    t.text     "bug_tracker_uri"
+    t.text     "dependencies",      default: [], array: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

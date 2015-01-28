@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
 
-gem 'gem_scraper'
 gem 'rails', '4.1.8'
 gem 'rails-api'
 gem 'spring', :group => :development
 gem 'pg'
 gem 'pry'
-
+gem 'json'
+gem 'rake-progressbar'
 
 
 # To use ActiveModel has_secure_password

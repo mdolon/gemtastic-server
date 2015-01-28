@@ -56,6 +56,6 @@ class RubygemsController < ApplicationController
   private
     
     def rubygem_params
-      params.require(:rubygem).permit(:name, :version_latest, :downloads, :version_downloads, :platform, :authors, :info, :licenses, :project_uri, :gem_uri, :homepage_uri, :wiki_uri, :documentation_uri, :mailing_list_uri, :source_code_uri, :bug_tracker_uri, :dependencies_runtime, :dependencies_development)
+      params.require(:rubygem).permit(:name, :version, :downloads, :version_downloads, :platform, :authors, :info, :licenses, :project_uri, :gem_uri, :homepage_uri, :wiki_uri, :documentation_uri, :mailing_list_uri, :source_code_uri, :bug_tracker_uri, :dependencies)
     end
 end
