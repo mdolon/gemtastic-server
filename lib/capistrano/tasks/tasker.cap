@@ -4,7 +4,7 @@ namespace :tasker do
   task :invoke do
     on roles(:app) do
       stage = (ENV['stage'] || "production")
-      sudo "cd #{deploy_to}/current; /usr/bin/env bundle exec rake #{ENV['task']} RAILS_ENV=#{stage}"
+      execute "cd #{deploy_to}/current; /usr/bin/env bundle exec rake #{ENV['task']} RAILS_ENV=#{stage}"
     end
   end
 end
