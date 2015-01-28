@@ -2,7 +2,9 @@ namespace :tasker do
   desc "Run a task on a remote server."
   # run like: cap staging tasker:invoke task=a_certain_task stage=production
   task :invoke do
-    stage = (ENV['stage'] || "production")
-    sudo "cd #{deploy_to}/current; /usr/bin/env rake #{ENV['task']} RAILS_ENV=#{stage}"
+    on roles(:app) do
+      stage = (ENV['stage'] || "production")
+      sudo "cd #{deploy_to}/current; /usr/bin/env bundle exec rake #{ENV['task']} RAILS_ENV=#{stage}"
+    end
   end
 end
