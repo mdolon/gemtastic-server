@@ -1,6 +1,6 @@
 require 'net/http'
 require 'json'
-require 'rake-progressbar'
+# require 'rake-progressbar'
 
 namespace :gemscraper do
 
@@ -11,7 +11,7 @@ namespace :gemscraper do
     puts "Fetched #{gemlist.lines.count} gems!\nNow parsing..."
 
     # Start progress bar
-    bar = RakeProgressbar.new(gemlist.lines.count)
+    # bar = RakeProgressbar.new(gemlist.lines.count)
 
     # For each gem, get gem name and update it
     gemlist.each_line do |line|
@@ -19,11 +19,11 @@ namespace :gemscraper do
       update_gem(gemname, 0)
 
       # Increment bar
-      bar.inc
+      # bar.inc
     end
 
     # Finished!
-    bar.finished
+    # bar.finished
   end
 
   def get(gemname)
@@ -47,14 +47,13 @@ namespace :gemscraper do
       rubygem = Rubygem.find_or_initialize_by(name: gemname)
       rubygem.update_attributes(gemjson)
       rubygem.save
+      puts "."
     # Else try it again and increment counter
     else
-      puts "Can't load URL, trying again in 10 seconds\n"
+      puts "x"
       10.times do |x|
         sleep 1
-        puts "."
       end
-      puts "Retrying!\n"
       i++
       update_gem(gemname, i)
     end
