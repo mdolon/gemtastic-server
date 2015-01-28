@@ -47,10 +47,10 @@ namespace :gemscraper do
       rubygem = Rubygem.find_or_initialize_by(name: gemname)
       rubygem.update_attributes(gemjson)
       rubygem.save
-      puts "Completed #{gemnam}"
+      puts "Completed #{gemname}"
     # Else try it again and increment counter
     else
-      puts "Stalling #{gemnam}"
+      puts "Stalling #{gemname}"
       10.times do |x|
         sleep 1
       end
