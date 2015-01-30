@@ -12,7 +12,7 @@ namespace :gemscraper do
     #
     # Fetch all gems, abort if none found
     puts "Fetching list of all gems."
-    gemlist = %x[gem list -r lisp]
+    gemlist = %x[gem list -r]
     abort("Couldn't load gems") unless gemlist.length > 0
 
     # Remove special characters and parse the list
